@@ -6,8 +6,8 @@ import streamlit as st
 from PIL import Image
 from transformers import BlipProcessor,BlipForConditionalGeneration
 ##NOW WE NEED TO LOAD THE PRE TRAINED BLIP MODEL
-image_processor=BlipProcessor.from_pretrained('Salesforce/blip-image-captioning-large')
-model=BlipForConditionalGeneration.from_pretrained('Salesforce/blip-image-captioning-large')
+image_processor=BlipProcessor.from_pretrained('Salesforce/blip-image-captioning-base')
+model=BlipForConditionalGeneration.from_pretrained('Salesforce/blip-image-captioning-base')
 st.title("Image Caption Generator") ##creating the title in the streamlit website
 image_upload=st.file_uploader('Please upload the image') ##creating an option to uplaod the image
 if image_upload is not None:
